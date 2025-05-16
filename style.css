@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd3a5, #fd6585);
+    color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Stage 1 */
+  .card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: radial-gradient(circle, #ffb6d9, #ff4f81);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .birthday-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #fff;
+  }
+  
+  .quote {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  .buttons {
+    margin-top: 2rem;
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff4f81;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff2366;
+  }
+  
+  /* Stage 2 */
+  .gallery-section {
+    display: none;
+    position: relative;
+    background: radial-gradient(circle, #ffb6d9, #b91372);
+    height: 100vh;
+    overflow: hidden;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .floating-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 0 15px #ff85a2;
+  }
+  
+  .floating-images {
+    position: relative;
+    display: flex;
+    animation: trainMove 40s linear infinite;
+  }
+  
+  .floating-images img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes trainMove {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .birthday-letter {
+    max-width: 700px;
+    margin: 3rem auto 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  .birthday-letter h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px #ffcce0;
+  }
+  
+  .birthday-letter p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
